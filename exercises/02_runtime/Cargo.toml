@@ -1,0 +1,24 @@
+[package]
+name = "async_runtime"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Core async functionality
+futures = "0.3"
+
+# For some tests that compare with Tokio
+tokio = { version = "1.0", features = ["full"] }
+
+[dev-dependencies]
+tokio-test = "0.4"
+
+# Example binary to run the runtime demo
+[[bin]]
+name = "runtime_demo"
+path = "src/bin/runtime_demo.rs"
+
+# Example binary to compare executors
+[[bin]]
+name = "executor_comparison"
+path = "src/bin/executor_comparison.rs"

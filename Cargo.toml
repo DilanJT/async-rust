@@ -1,0 +1,19 @@
+[workspace]
+members = [
+    "exercises/01_foundations",
+    "exercises/02_runtime", 
+    "exercises/03_async_await",
+    "exercises/04_concurrency",
+    "exercises/05_streams",
+    "exercises/06_errors",
+    "exercises/07_performance",
+    "projects/chat_server",
+]
+
+[workspace.dependencies]
+tokio = { version = "1.0", features = ["full"] }
+futures = "0.3"
+criterion = "0.5"
+anyhow = "1.0"
+tracing = "0.1"
+tracing-subscriber = "0.3"
